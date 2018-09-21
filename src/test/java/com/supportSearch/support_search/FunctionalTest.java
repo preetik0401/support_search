@@ -2,7 +2,6 @@ package com.supportSearch.support_search;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterClass;
@@ -15,11 +14,6 @@ public class FunctionalTest {
 	public static void setUp() {
 		driver = new SafariDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	}
-
-	@After
-	public void cleanUp() {
-		driver.manage().deleteAllCookies();
 	}
 
 	@AfterClass
